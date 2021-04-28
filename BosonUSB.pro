@@ -2,6 +2,7 @@ QT -= gui
 
 CONFIG += c++11 console
 CONFIG -= app_bundle
+VERSION = 0.0.1
 QT_CONFIG -= no-pkg-config
 CONFIG  += link_pkgconfig
 PKGCONFIG += opencv
@@ -11,22 +12,7 @@ PKGCONFIG += opencv
 INCLUDEPATH += /usr/local/include/opencv
 INCLUDEPATH += /usr/local/include/opencv2
 INCLUDEPATH += /usr/local/include/opencv4
-LIBS += -L/usr/local/lib\
-     -lstdc++\
-     -lopencv_calib3d\
-     -lopencv_core\
-     -lopencv_features2d \
-     -lopencv_flann\
-     -lopencv_highgui\
-     -lopencv_imgproc\
-     -lopencv_ml\
-     -lopencv_objdetect\
-     -lopencv_photo\
-     -lopencv_stitching\
-     -lopencv_superres\
-     -lopencv_ts\
-     -lopencv_video\
-     -lopencv_videostab
+LIBS += -L/usr/local/lib -lopencv_imgproc -lopencv_core -lopencv_highgui
 
 SOURCES += \
         src/main.cpp \
